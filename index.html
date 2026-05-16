@@ -46,22 +46,46 @@
 
     .content { max-width: 1000px; margin: 0 auto; padding: 40px 60px; }
 
-    /* Hamburger Menu */
-    .nav-toggle { display: none; font-size: 28px; cursor: pointer; }
-    nav { display: flex; gap: 32px; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+    .brand {
+      font-size: 29px;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    /* Hamburger */
+    .nav-toggle {
+      font-size: 28px;
+      cursor: pointer;
+      display: none;
+    }
+    nav {
+      display: flex;
+      gap: 32px;
+    }
+    nav a {
+      color: #444;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    nav a:hover { color: var(--accent); }
+
     @media (max-width: 768px) {
       .nav-toggle { display: block; }
       nav { 
         position: fixed; top: 0; left: -100%; width: 100%; height: 100vh;
-        background: var(--dark); flex-direction: column; padding: 100px 40px;
-        transition: 0.4s; align-items: center;
+        background: var(--dark); flex-direction: column; padding: 120px 40px 40px;
+        transition: 0.4s ease; align-items: center; gap: 30px;
+        font-size: 22px;
       }
       nav.active { left: 0; }
     }
-
-    .brand { font-size: 29px; font-weight: 700; color: var(--text); text-decoration: none; }
-    nav a { color: #444; font-weight: 500; text-decoration: none; }
-    nav a:hover { color: var(--accent); }
 
     .hero h1 {
       font-size: clamp(42px, 6.5vw, 72px);
@@ -114,7 +138,7 @@
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#certs">Certifications</a>
-          <a href="#kba">KBA / Writing</a>
+          <a href="#kba">KBA & Writing</a>
           <a href="#experiments">Experiments</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -138,12 +162,12 @@
 
         <section id="projects">
           <h2>Projects & Labs</h2>
-          <p>Coming soon with screenshots and write-ups.</p>
+          <p>Coming soon with screenshots and detailed write-ups.</p>
         </section>
 
         <section id="certs">
           <h2>Certifications</h2>
-          <p>CompTIA CySA+, Security+, Network+, A+, ISC2 CC</p>
+          <p>CompTIA CySA+, Security+, Network+, A+, ISC2 Certified in Cybersecurity (CC)</p>
         </section>
 
         <section id="kba">
@@ -153,7 +177,7 @@
 
         <section id="experiments">
           <h2>Experiments & Research</h2>
-          <p>Wireless security research, home labs, and personal projects.</p>
+          <p>Wireless security research, home labs, and architecture notes.</p>
         </section>
 
         <section id="contact">
@@ -169,9 +193,12 @@
   </div>
 
   <script>
-    // Mobile Hamburger Menu
-    document.querySelector('.nav-toggle').addEventListener('click', () => {
-      document.getElementById('main-nav').classList.toggle('active');
+    // Hamburger Menu
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('main-nav');
+    
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
     });
   </script>
 </body>
