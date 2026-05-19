@@ -1,149 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Signal & Systems</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Signal & Systems
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="assets/css/style.css"
+  />
+
 </head>
 
 <body>
-  <div class="shell">
-    <aside class="rail" aria-label="Site identity rail">
-      <div class="mark">S/S</div>
-      <div class="rail-text">Systems • Signals • Security</div>
-    </aside>
 
-    <div class="content">
-      <header class="site-header">
-        <a href="index.html" class="brand" aria-label="Signal and Systems home">
-          <div class="brand-title">Signal & Systems</div>
-          <div class="brand-subtitle">Infrastructure Portfolio</div>
+<div class="shell">
+
+  <!-- LEFT RAIL -->
+
+  <aside class="rail">
+
+    <div class="mark">
+      S/S
+    </div>
+
+    <div class="rail-text">
+      Systems • Signals • Security
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+
+  <div class="content">
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+      <a
+        href="index.html"
+        class="brand"
+      >
+
+        <div class="brand-title">
+          Signal & Systems
+        </div>
+
+        <div class="brand-subtitle">
+          Infrastructure Portfolio
+        </div>
+
+      </a>
+
+      <button class="nav-toggle">
+        ☰
+      </button>
+
+      <nav
+        class="main-nav"
+        id="main-nav"
+      >
+
+        <a
+          href="index.html"
+          class="active"
+        >
+          Home
         </a>
 
-        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <a href="about.html">
+          About
+        </a>
 
-        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-          <a href="index.html" class="active">Home</a>
-          <a href="about.html">About</a>
-          <a href="resume.html">Resume & Credentials</a>
-          <a href="history.html">Professional History</a>
-          <a href="writing.html">Writing</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </header>
+        <a href="resume.html">
+          Resume & Credentials
+        </a>
 
-      <main>
-        <section class="hero" aria-labelledby="intro-title">
-          <div>
-            <p class="eyebrow">Technical portfolio / systems notebook</p>
+        <a href="history.html">
+          Professional History
+        </a>
 
-            <h1 id="intro-title">
-              Enterprise IT, identity, networking, and security — explained through labs, diagrams, and practical notes.
-            </h1>
+        <a href="writing.html">
+          Writing
+        </a>
 
-            <p class="hero-copy">
-              A privacy-conscious portfolio documenting technical growth in infrastructure, cloud administration, endpoint management, cybersecurity, and systems thinking.
-            </p>
+        <a href="contact.html">
+          Contact
+        </a>
 
-            <div class="button-row">
-              <a href="projects.html" class="btn primary">View Projects</a>
-              <a href="resume.html" class="btn">Resume & Credentials</a>
-              <a href="writing.html" class="btn">Read Technical Notes</a>
-            </div>
+      </nav>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main>
+
+      <!-- HERO -->
+
+      <section class="hero">
+
+        <div>
+
+          <p class="eyebrow">
+            Technical portfolio / systems notebook
+          </p>
+
+          <h1>
+
+            Enterprise IT, networking, identity, and operational security explained through labs, architecture notes, and technical writing.
+
+          </h1>
+
+          <p class="hero-copy">
+
+            A systems-focused portfolio documenting practical learning in infrastructure, cloud administration, endpoint management, networking, and enterprise operational technology.
+
+          </p>
+
+          <div class="button-row">
+
+            <a
+              href="resume.html"
+              class="btn primary"
+            >
+              Resume & Credentials
+            </a>
+
+            <a
+              href="writing.html"
+              class="btn"
+            >
+              Technical Writing
+            </a>
+
           </div>
 
-          <aside class="identity-card" aria-label="Portfolio snapshot">
-            <h2>Profile Snapshot</h2>
+        </div>
+
+        <!-- HERO CARD -->
+
+        <aside class="note-card">
+
+          <img
+            src="photo.jpg"
+            alt="Professional portrait"
+            class="profile-photo"
+          />
+
+          <h2>
+            Portfolio overview
+          </h2>
+
+          <p>
+
+            This portfolio serves as a professional archive for infrastructure labs, technical observations, certification-aligned study, systems experiments, and operational documentation.
+
+          </p>
+
+          <div class="button-row">
+
+            <a
+              href="about.html"
+              class="btn"
+            >
+              About
+            </a>
+
+            <a
+              href="contact.html"
+              class="btn"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </aside>
+
+      </section>
+
+      <!-- FEATURED AREAS -->
+
+      <section class="panel">
+
+        <div class="section-head">
+
+          <h2>
+            Focus areas
+          </h2>
+
+          <p>
+
+            Current technical domains, labs, and long-term areas of development.
+
+          </p>
+
+        </div>
+
+        <div class="card-grid">
+
+          <!-- CARD -->
+
+          <article class="card">
+
+            <span class="tag">
+              Infrastructure
+            </span>
+
+            <h3>
+              Systems administration
+            </h3>
 
             <p>
-              A professional archive for projects, certification-domain mapping, technical writing, and practical demonstrations.
+
+              Windows administration, endpoint management, Active Directory, virtualization, Group Policy, and operational troubleshooting.
+
             </p>
 
-            <div class="status-list">
-              <div>
-                <span>Focus</span>
-                <strong>Infrastructure</strong>
-              </div>
+          </article>
 
-              <div>
-                <span>Stack</span>
-                <strong>Microsoft / Azure</strong>
-              </div>
+          <!-- CARD -->
 
-              <div>
-                <span>Mode</span>
-                <strong>Labs + Writing</strong>
-              </div>
+          <article class="card">
 
-              <div>
-                <span>Status</span>
-                <strong>Version 1</strong>
-              </div>
-            </div>
-          </aside>
-        </section>
+            <span class="tag">
+              Networking
+            </span>
 
-        <section class="panel">
-          <div class="section-head">
-            <h2>Start here</h2>
+            <h3>
+              Traffic and visibility
+            </h3>
 
             <p>
-              The site is organized around what recruiters and technical reviewers usually need: credibility, evidence, writing, and contact.
+
+              DNS, VLANs, wireless networking, IPv4/IPv6 behavior, segmentation, routing concepts, and protocol observation.
+
             </p>
-          </div>
 
-          <div class="card-grid">
-            <article class="card">
-              <span class="tag">Projects</span>
-              <h3>Labs & demonstrations</h3>
-              <p>
-                Windows, identity, endpoint monitoring, IoT traffic, Azure fundamentals, and architecture notes.
-              </p>
-              <a class="card-link" href="projects.html">Open projects →</a>
-            </article>
+          </article>
 
-            <article class="card">
-              <span class="tag">Credentials</span>
-              <h3>Resume & certifications</h3>
-              <p>
-                A controlled place to show resume, education, certifications, and future learning path.
-              </p>
-              <a class="card-link" href="resume.html">View credentials →</a>
-            </article>
+          <!-- CARD -->
 
-            <article class="card">
-              <span class="tag">Writing</span>
-              <h3>Technical notes</h3>
-              <p>
-                Short articles that demonstrate how I reason through systems, risks, tradeoffs, and architecture.
-              </p>
-              <a class="card-link" href="writing.html">Read writing →</a>
-            </article>
-          </div>
-        </section>
+          <article class="card">
 
-        <section class="contact-band">
-          <div>
-            <h2>Need the direct version?</h2>
+            <span class="tag">
+              Security
+            </span>
+
+            <h3>
+              Detection and monitoring
+            </h3>
+
             <p>
-              Use the resume page or contact page for identity, professional links, and direct follow-up.
+
+              SIEM concepts, endpoint telemetry, HIDS/HIPS tradeoffs, event logging, operational security, and monitoring workflows.
+
             </p>
-          </div>
 
-          <div class="contact-links">
-            <a href="resume.html">Resume</a>
-            <a href="contact.html">Contact</a>
-          </div>
-        </section>
-      </main>
+          </article>
 
-      <footer>
-        © 2026 Signal & Systems. Built with HTML, CSS, JavaScript, and GitHub Pages.
-      </footer>
-    </div>
+          <!-- CARD -->
+
+          <article class="card">
+
+            <span class="tag">
+              Cloud
+            </span>
+
+            <h3>
+              Microsoft ecosystem
+            </h3>
+
+            <p>
+
+              Azure fundamentals, Microsoft 365 administration, hybrid identity, governance concepts, and cloud-connected environments.
+
+            </p>
+
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- FEATURED PROJECTS -->
+
+      <section class="panel">
+
+        <div class="section-head">
+
+          <h2>
+            Featured projects
+          </h2>
+
+          <p>
+
+            Labs and technical observations currently being documented.
+
+          </p>
+
+        </div>
+
+        <div class="card-grid">
+
+          <!-- CARD -->
+
+          <article class="card">
+
+            <span class="tag">
+              Endpoint Security
+            </span>
+
+            <h3>
+              HIDS vs HIPS operational tradeoffs
+            </h3>
+
+            <p>
+
+              Examining endpoint monitoring, resource consumption, false positives, telemetry, and centralized security visibility.
+
+            </p>
+
+          </article>
+
+          <!-- CARD -->
+
+          <article class="card">
+
+            <span class="tag">
+              IoT Research
+            </span>
+
+            <h3>
+              Smart home traffic analysis
+            </h3>
+
+            <p>
+
+              Observing communication patterns between IoT devices, cloud infrastructure, local segmentation, DNS behavior, and protocol activity.
+
+            </p>
+
+          </article>
+
+          <!-- CARD -->
+
+          <article class="card">
+
+            <span class="tag">
+              Identity
+            </span>
+
+            <h3>
+              Active Directory lab environment
+            </h3>
+
+            <p>
+
+              Building a small enterprise-style environment involving domains, organizational units, policies, accounts, and endpoint restrictions.
+
+            </p>
+
+          </article>
+
+          <!-- CARD -->
+
+          <article class="card">
+
+            <span class="tag">
+              Networking
+            </span>
+
+            <h3>
+              Wireless and Bluetooth observations
+            </h3>
+
+            <p>
+
+              Research-oriented notes concerning Bluetooth pairing, wireless trust boundaries, segmentation, and connected device behavior.
+
+            </p>
+
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- PHILOSOPHY -->
+
+      <section class="panel">
+
+        <div class="section-head">
+
+          <h2>
+            Why this site exists
+          </h2>
+
+          <p>
+
+            A portfolio should demonstrate thought process, not simply list credentials.
+
+          </p>
+
+        </div>
+
+        <div class="note-card">
+
+          <p>
+
+            Certifications alone do not fully communicate technical curiosity or capability. This site exists to document practical experimentation, architectural thinking, operational observations, and the process of turning theoretical study into visible technical artifacts.
+
+          </p>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+      © 2026 Signal & Systems
+    </footer>
+
   </div>
 
-  <script src="assets/js/main.js"></script>
+</div>
+
+<script src="assets/js/main.js"></script>
+
 </body>
 </html>
