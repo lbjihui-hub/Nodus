@@ -1,36 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Signal & Systems</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Contact | Signal & Systems
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="assets/css/style.css"
+  />
+
 </head>
 
 <body>
-  <div class="shell">
-    <aside class="rail" aria-label="Site identity rail">
-      <div class="mark">S/S</div>
-      <div class="rail-text">Systems • Signals • Security</div>
-    </aside>
 
-    <div class="content">
-      <header class="site-header">
-        <a href="index.html" class="brand" aria-label="Signal and Systems home">
-          <div class="brand-title">Signal & Systems</div>
-          <div class="brand-subtitle">Infrastructure Portfolio</div>
+<div class="shell">
+
+  <!-- LEFT RAIL -->
+
+  <aside class="rail">
+
+    <div class="mark">
+      S/S
+    </div>
+
+    <div class="rail-text">
+      Systems • Signals • Security
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+
+  <div class="content">
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+      <a
+        href="index.html"
+        class="brand"
+      >
+
+        <div class="brand-title">
+          Signal & Systems
+        </div>
+
+        <div class="brand-subtitle">
+          Infrastructure Portfolio
+        </div>
+
+      </a>
+
+      <button class="nav-toggle">
+        ☰
+      </button>
+
+      <nav
+        class="main-nav"
+        id="main-nav"
+      >
+
+        <a href="index.html">
+          Home
         </a>
 
-        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <a href="about.html">
+          About
+        </a>
 
-        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="resume.html">Resume & Credentials</a>
-          <a href="history.html">Professional History</a>
-          <a href="writing.html">Writing</a>
-          <a href="contact.html" class="active">Contact</a>
-        </nav>
-      </header>
+        <a href="resume.html">
+          Resume & Credentials
+        </a>
 
-      <main>
+        <a href="history.html">
+          Professional History
+        </a>
+
+        <a href="writing.html">
+          Writing
+        </a>
+
+        <a
+          href="contact.html"
+          class="active"
+        >
+          Contact
+        </a>
+
+      </nav>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main>
+
+      <!-- HERO -->
+
+      <section class="hero">
+
+        <div>
+
+          <p class="eyebrow">
+            Contact / professional inquiry
+          </p>
+
+          <h1>
+            Reach out for professional opportunities, technical discussion, collaboration, or academic connection.
+          </h1>
+
+          <p class="hero-copy">
+
+            This contact page is designed for recruiters, hiring managers, professors, employment offices, technical peers, and professional networking.
+
+          </p>
+
+        </div>
+
+        <!-- CONTACT CARD -->
+
+        <aside class="note-card">
+
+          <h2>
+            Direct contact
+          </h2>
+
+          <p>
+
+            For professional inquiries, resume follow-up, interview requests, or technical discussion.
+
+          </p>
+
+          <div class="button-row">
+
+            <button
+              class="btn"
+              data-copy="lbjihui@gmail.com"
+            >
+              Copy Email
+            </button>
+
+            <a
+              href="mailto:lbjihui@gmail.com"
+              class="btn primary"
+            >
+              Email Directly
+            </a>
+
+          </div>
+
+        </aside>
+
+      </section>
+
+      <!-- CONTACT FORM -->
+
+      <section class="panel">
+
+        <div class="section-head">
+
+          <h2>
+            Professional inquiry form
+          </h2>
+
+          <p>
+
+            This form generates a structured email draft using your default email application.
+
+          </p>
+
+        </div>
+
+        <form id="contact-form">
+
+          <div class="form-grid">
+
+            <!-- NAME -->
+
+            <div class="form-field">
+
+              <label for="name">
+                Name
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+
+            </div>
+
+            <!-- EMAIL -->
+
+            <div class="form-field">
+
+              <label for="email">
+                Email
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+
+            </div>
+
+            <!-- ROLE -->
+
+            <div class="form-field">
+
+              <label for="role">
+                I am a...
+              </label>
+
+              <select
+                id="role"
+                name="role"
+              >
+
+                <option value="Recruiter">
+                  Recruiter
+                </option>
+
+                <option value="Hiring Manager">
+                  Hiring Manager
+                </option>
+
+                <option value="Employment Office">
+                  Employment Office
+                </option>
+
+                <option value="Professor">
+                  Professor
+                </option>
+
+                <option value="Technical Peer">
+                  Technical Peer
+                </option>
+
+                <option value="Other">
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+            <!-- ORGANIZATION -->
+
+            <div class="form-field">
+
+              <label for="organization">
+                Organization
+              </label>
+
+              <input
+                type="text"
+                id="organization"
+                name="organization"
+                placeholder="Company, school, or organization"
+              />
+
+            </div>
+
+            <!-- TOPIC -->
+
+            <div class="form-field full">
+
+              <label for="topic">
+                Reason for contact
+              </label>
+
+              <select
+                id="topic"
+                name="topic"
+              >
+
+                <option value="Job Opportunity">
+                  Job Opportunity
+                </option>
+
+                <option value="Interview Request">
+                  Interview Request
+                </option>
+
+                <option value="Resume Follow-up">
+                  Resume Follow-up
+                </option>
+
+                <option value="Technical Discussion">
+                  Technical Discussion
+                </option>
+
+                <option value="Academic Discussion">
+                  Academic Discussion
+                </option>
+
+                <option value="Other">
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+            <!-- MESSAGE -->
+
+            <div class="form-field full">
+
+              <label for="message">
+                Message
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Write your message here."
+                required
+              ></textarea>
+
+            </div>
+
+          </div>
+
+          <!-- BUTTONS -->
+
+          <div class="button-row">
+
+            <button
+              type="submit"
+              class="btn primary"
+            >
+              Create Email Draft
+            </button>
+
+            <button
+              type="reset"
+              class="btn"
+            >
+              Clear
+            </button>
+
+          </div>
+
+          <p class="form-note">
+
+            Because GitHub Pages is static hosting, this form currently generates a mail draft rather than directly submitting data to a server.
+
+          </p>
+
+        </form>
+
+      </section>
+
+      <!-- LINKS -->
+
+      <section class="panel">
+
+        <div class="section-head">
+
+          <h2>
+            Professional links
+          </h2>
+
+          <p>
+
+            External platforms and professional profiles.
+
+          </p>
+
+        </div>
+
+        <div class="card-grid">
+
+          <!-- LINK -->
+
+          <article class="card">
+
+            <span class="tag">
+              LinkedIn
+            </span>
+
+            <h3>
+              Professional profile
+            </h3>
+
+            <p>
+
+              Employment history, networking, certifications, and recruiter visibility.
+
+            </p>
+
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              class="btn"
+            >
+              Open LinkedIn
+            </a>
+
+          </article>
+
+          <!-- LINK -->
+
+          <article class="card">
+
+            <span class="tag">
+              GitHub
+            </span>
+
+            <h3>
+              Technical repository
+            </h3>
+
+            <p>
+
+              Source code, labs, technical notes, and infrastructure experiments.
+
+            </p>
+
+            <a
+              href="https://github.com"
+              target="_blank"
+              class="btn"
+            >
+              Open GitHub
+            </a>
+
+          </article>
+
+          <!-- LINK -->
+
+          <article class="card">
+
+            <span class="tag">
+              Resume
+            </span>
+
+            <h3>
+              Credentials and experience
+            </h3>
+
+            <p>
+
+              Resume, certifications, education, and professional development history.
+
+            </p>
+
+            <a
+              href="resume.html"
+              class="btn"
+            >
+              Open Resume
+            </a>
+
+          </article>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+      © 2026 Signal & Systems
+    </footer>
+
+  </div>
+
+</div>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
