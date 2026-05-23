@@ -52,7 +52,7 @@
           <h2>Article details</h2>
           <p><strong>Category:</strong> Wireless Security / IoT</p>
           <p><strong>Subject:</strong> 2015 Honda Civic Hands-Free Link</p>
-          <p><strong>Concepts:</strong> Bluetooth, OBEX, Bluesnarfing, KNOB attack, BR/EDR</p>
+          <p><strong>Concepts:</strong> Bluetooth, OBEX, Bluesnarfing, KNOB attack, BR/EDR, pairing protocol</p>
           <a href="writing.html" class="btn">← Back to Writing</a>
         </aside>
       </section>
@@ -77,6 +77,61 @@
 
       <section class="panel">
         <div class="section-head">
+          <h2>How Bluetooth pairing and reconnection actually work</h2>
+        </div>
+        <div class="note-card">
+          <p>
+            Understanding the attack surface requires understanding the connection
+            process itself. Bluetooth reconnection follows a structured sequence
+            that is worth examining at the protocol level.
+          </p>
+          <p>
+            <strong>Inquiry.</strong> When the car turns on, the head unit broadcasts
+            inquiry packets asking whether any Bluetooth devices are within range. Any
+            device in discoverable mode responds with its MAC address and device class.
+            This is the "hello, is anyone out there" phase.
+          </p>
+          <p>
+            <strong>Page.</strong> Once the head unit identifies a MAC address that
+            matches its bonded device list, it moves to the page phase — a directed
+            connection attempt specifically targeting that device. This is "is XYZ
+            specifically out there."
+          </p>
+          <p>
+            <strong>Page response.</strong> The phone responds confirming its identity.
+          </p>
+          <p>
+            <strong>Authentication.</strong> Both devices use the link key stored
+            during the original pairing to run a challenge-response authentication.
+            The car sends a random number. The phone encrypts it using the shared
+            link key and returns the result. The car performs the same calculation
+            independently and compares results. If they match, identity is confirmed
+            without the key itself ever being transmitted. This is why spoofing a
+            MAC address alone is insufficient — the attacker also needs the link key.
+          </p>
+          <p>
+            <strong>Encryption negotiation.</strong> Both devices agree on an
+            encryption key derived from the link key to protect the session. This
+            is precisely where the KNOB attack intervenes — by manipulating this
+            negotiation to force a shorter, weaker encryption key that can be
+            brute-forced in real time.
+          </p>
+          <p>
+            <strong>Connection established.</strong> Profiles activate. The Phonebook
+            Access Profile initiates contact synchronization over OBEX. Your contact
+            list transfers to the head unit.
+          </p>
+          <p>
+            The automatic trust relationship established during initial bonding
+            persists indefinitely on both devices. Neither device re-verifies the
+            identity of the other beyond the stored link key. This persistent trust
+            is the architectural assumption that certain attacks are designed to exploit.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
           <h2>Bluetooth versions and their limitations</h2>
         </div>
         <div class="note-card">
@@ -94,9 +149,9 @@
             Bluetooth 4.0 improved the encryption but introduced BLE — Bluetooth Low
             Energy — which has its own attack surface involving advertising packets
             that broadcast device identity continuously. Bluetooth 5.0 extended range
-            significantly, up to 400 meters under ideal conditions, which means the
-            assumption that an attacker must be immediately adjacent to the target
-            vehicle is not always accurate.
+            significantly, up to approximately 1,300 feet under ideal conditions,
+            which means the assumption that an attacker must be immediately adjacent
+            to the target vehicle is not always accurate.
           </p>
         </div>
       </section>
@@ -120,9 +175,9 @@
             A Bluesnarfing attempt using obexftp targets the OBEX file transfer
             capability to pull contact lists, call logs, and messages from vulnerable
             implementations without triggering any notification on the target device.
-            A KNOB attack — Key Negotiation of Bluetooth — exploits a vulnerability
-            in the Bluetooth pairing negotiation process to downgrade the encryption
-            key length to as little as one byte, making brute force decryption trivial.
+            A KNOB attack exploits the encryption negotiation phase to downgrade the
+            session key length to as little as one byte, making brute force
+            decryption trivial.
           </p>
           <p>
             The scenario in which an attacker who cannot execute a direct phishing
