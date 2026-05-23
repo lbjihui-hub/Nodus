@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HIDS vs HIPS | Signal & Systems</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+<div class="shell">
+
+  <aside class="rail">
+    <div class="mark">S/S</div>
+    <div class="rail-text">Systems • Signals • Security</div>
+  </aside>
+
+  <div class="content">
+
+    <header class="site-header">
+      <a href="index.html" class="brand">
+        <div class="brand-title">Signal & Systems</div>
+        <div class="brand-subtitle">Infrastructure Portfolio</div>
+      </a>
+      <button class="nav-toggle">☰</button>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume & Credentials</a>
+        <a href="history.html">Professional History</a>
+        <a href="projects.html">Projects</a>
+        <a href="writing.html" class="active">Writing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Technical writing / endpoint security</p>
+          <h1>HIDS vs HIPS: Operational Tradeoffs in Resource-Constrained Enterprise Environments</h1>
+          <p class="hero-copy">
+            The decision between host intrusion detection and prevention is not purely 
+            technical — it is operational. Resource constraints, user workflow, and 
+            proportional threat assessment all factor into the right answer.
+          </p>
+        </div>
+
+        <aside class="note-card">
+          <h2>Article details</h2>
+          <p><strong>Category:</strong> Endpoint Security / Security Operations</p>
+          <p><strong>Environment:</strong> Windows endpoints, clinical and government environments</p>
+          <p><strong>Concepts:</strong> HIDS, HIPS, CVSS, endpoint telemetry, resource management</p>
+          <a href="writing.html" class="btn">← Back to Writing</a>
+        </aside>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <h2>Detection versus prevention</h2>
+        </div>
+        <div class="note-card">
+          <p>
+            When evaluating host-based security controls, the decision between a 
+            Host Intrusion Detection System and a Host Intrusion Prevention System 
+            is not purely technical — it is operational. The distinction matters most 
+            in environments where endpoints are already under resource pressure.
+          </p>
+          <p>
+            A <strong>HIDS</strong> monitors system activity and generates alerts. 
+            It observes file changes, login events, process behavior, and network 
+            connections, then reports what it finds. A <strong>HIPS</strong> does 
+            all of that and acts on it — quarantining files, terminating processes, 
+            blocking connections, and notifying the endpoint management platform in 
+            real time. The prevention capability comes at a cost: active intervention 
+            requires more CPU cycles, more memory, and more disk I/O than passive 
+            observation alone.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <h2>The resource constraint reality</h2>
+        </div>
+        <div class="note-card">
+          <p>
+            In a clinical or government environment where an endpoint is simultaneously 
+            running an electronic health record system, a fax client, Microsoft Edge, 
+            email, and background management agents, adding an actively intervening 
+            security process to that stack on a machine with 8GB of RAM is a real 
+            operational decision.
+          </p>
+          <p>
+            If the HIPS miscategorizes a legitimate clinical application as suspicious 
+            and quarantines it mid-session, the user workflow stops. That is not an 
+            abstract concern — it is the kind of incident that generates calls to the 
+            service desk and pressure to disable the tool entirely, which defeats the 
+            purpose.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <h2>When prevention justifies the cost</h2>
+        </div>
+        <div class="note-card">
+          <p>
+            The threat scenarios that justify accepting that overhead include 
+            USB-based data exfiltration, zero-day exploitation, and lateral movement 
+            attempts where waiting for a human to review a HIDS alert is too slow. 
+            In those cases the prevention capability is worth the resource cost.
+          </p>
+          <p>
+            In lower-risk environments with tight hardware constraints and 
+            workflow-sensitive users, a well-tuned HIDS feeding into a centralized 
+            SIEM may produce better operational outcomes than a HIPS that generates 
+            false positives and user complaints.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <h2>Proportional controls and CVSS context</h2>
+        </div>
+        <div class="note-card">
+          <p>
+            The Common Vulnerability Scoring System (CVSS) provides a standardized 
+            framework for evaluating vulnerability severity. A zero-day with a high 
+            CVSS score in an environment handling protected health information or 
+            criminal justice data justifies aggressive prevention controls. A 
+            low-severity vulnerability on an isolated administrative workstation 
+            may not.
+          </p>
+          <p>
+            Endpoint security decisions should be proportional to the actual threat 
+            surface, not uniform across every device in the environment. The right 
+            answer depends on what the machine does, who uses it, what data it 
+            touches, and what hardware it is running on.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <h2>Operational lesson</h2>
+        </div>
+        <div class="note-card">
+          <p>
+            Neither HIDS nor HIPS is universally correct. The decision requires 
+            understanding the environment — its hardware constraints, user workflows, 
+            threat profile, and tolerance for false positives. A security control 
+            that gets disabled because it breaks clinical workflows provides zero 
+            protection. Visibility that goes unreviewed because there is no SIEM 
+            provides zero protection. The right tool is the one that fits the 
+            environment and actually gets used.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>© 2026 Signal & Systems</footer>
+
+  </div>
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
